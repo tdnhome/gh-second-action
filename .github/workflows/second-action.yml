@@ -17,4 +17,4 @@ jobs:
       uses: actions/upload-artifact@v3
       if: always()
       with:
-        path: test-output/**
+        path: second.action/test-output/**
