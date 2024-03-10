@@ -1,5 +1,4 @@
-name: First Workflow
-name: Run Maven Test
+name: Run Java Test with Maven
 on: workflow_dispatch
 jobs:
   tests:
