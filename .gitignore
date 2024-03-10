@@ -1,0 +1,7 @@
+
+second.action/.project
+second.action/.classpath
+second.action/.settings/org.eclipse.jdt.core.prefs
+second.action/.settings/org.eclipse.m2e.core.prefs
+second.action/test-output/**
+.DS_Store
