@@ -13,3 +13,8 @@ jobs:
         distribution: 'temurin'
     - name: Run tests
       run: mvn -f second.action/pom.xml clean test
+    - name: Upload Test Report
+      uses: actions/upload-artifact@v3
+      if: always()
+      with:
+        path: reports/extent/report_*.html
