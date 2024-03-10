@@ -2,6 +2,8 @@
 
 Sample workflow to run java test via maven
 
+REF: https://subodhsingh.hashnode.dev/running-automated-tests-with-github-actions-maven-testng
+
 ```
 name: Run Java Test with Maven
 on: workflow_dispatch
@@ -17,5 +19,10 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
     - name: Run tests
-      run: mvn clean test
+      run: mvn -f second.action/pom.xml clean test
+    - name: Upload Test Report
+      uses: actions/upload-artifact@v3
+      if: always()
+      with:
+        path: second.action/test-output/*.*
 ```
