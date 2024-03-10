@@ -17,4 +17,4 @@ jobs:
       uses: actions/upload-artifact@v3
       if: always()
       with:
-        path: reports/extent/report_*.html
+        path: test-output/**
