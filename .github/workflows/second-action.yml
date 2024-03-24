@@ -19,3 +19,17 @@ jobs:
       with:
         name: test-output-artifacts
         path: second.action/target/surefire-reports/*.*
+  
+  deploy:
+    needs: tests
+    runs-on: ubuntu-latest
+    steps:
+    - name: Download Test Report
+      uses: actions/download-artifact@v3
+      with:
+        name: test-output-artifacts
+    - name: Verify Download
+      run: ls
+    - name: Deploy
+      run: echo "Deploying"
+  
