@@ -18,4 +18,4 @@ jobs:
       if: always()
       with:
         name: test-output-artifacts
-        path: second.action/test-output/*.*
+        path: second.action/target/surefire-reports/*.*
